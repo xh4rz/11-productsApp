@@ -1,9 +1,11 @@
-import { Text, View } from 'react-native';
+import { Button, Icon, Layout, Text } from '@ui-kitten/components';
 
 export const HomeScreen = () => {
 	return (
-		<View>
+		<Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 			<Text>HomeScreen</Text>
-		</View>
+
+			<Button accessoryLeft={<Icon name="facebook" />}>Cerrar Sesión</Button>
+		</Layout>
 	);
 };
