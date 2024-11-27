@@ -1,6 +1,7 @@
 import { Input, Layout, Text, Button } from '@ui-kitten/components';
 import { useWindowDimensions } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { MyIcon } from '../../components/ui/MyIcon';
 
 export const LoginScreen = () => {
 	const { height } = useWindowDimensions();
@@ -19,12 +20,14 @@ export const LoginScreen = () => {
 						placeholder="Correo electrónico"
 						keyboardType="email-address"
 						autoCapitalize="none"
+						accessoryLeft={<MyIcon name="email-outline" />}
 						style={{ marginBottom: 10 }}
 					/>
 					<Input
 						placeholder="Contraseña"
 						autoCapitalize="none"
 						secureTextEntry
+						accessoryLeft={<MyIcon name="lock-outline" />}
 						style={{ marginBottom: 10 }}
 					/>
 				</Layout>
@@ -34,7 +37,11 @@ export const LoginScreen = () => {
 
 				{/* Button */}
 				<Layout>
-					<Button onPress={() => {}}>Ingresar</Button>
+					<Button
+						accessoryRight={<MyIcon name="arrow-forward-outline" white />}
+						onPress={() => {}}>
+						Ingresar
+					</Button>
 				</Layout>
 
 				{/* Informacion para crear cuenta */}
