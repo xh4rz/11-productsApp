@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import { tesloApi } from '../../config/api/tesloApi';
 import { User } from '../../domain/entities/user';
 import type { AuthResponse } from '../../infrastructure/interfaces/auth.responses';
